@@ -8,7 +8,7 @@ var oppRed1Img,oppRed2Img;
 var gameOverImg,cycleBell;
 
 var pinkCG, yellowCG,redCG; 
-
+var s_b;
 var END =0;
 var PLAY =1;
 var gameState = PLAY;
@@ -154,10 +154,6 @@ function draw() {
 
     if(s_b_g.isTouching(mainCyclist)){
       gameState = END ;
-      console.log("Touch");
-      //s_b.velocityX=0;
-      s_b.velocityY=0;
-
     }
     
     
@@ -173,15 +169,19 @@ function draw() {
   
     s_b_g.setVelocityXEach(0);
     s_b_g.setLifetimeEach(-1);
+    //s_b_g.destroyEach();
 
     pinkCG.setVelocityXEach(0);
     pinkCG.setLifetimeEach(-1);
+    
   
     yellowCG.setVelocityXEach(0);
     yellowCG.setLifetimeEach(-1);
+    
   
     redCG.setVelocityXEach(0);
     redCG.setLifetimeEach(-1);
+    
 
     
 
